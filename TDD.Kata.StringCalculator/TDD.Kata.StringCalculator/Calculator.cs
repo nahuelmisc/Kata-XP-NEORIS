@@ -10,8 +10,19 @@ namespace TDD.Kata.StringCalculator
     {
         public int add(string numbers)
         {
-            string value = numbers.Equals(String.Empty) ? "0" : numbers;
-            return Int32.Parse(value);
+            if (numbers.Equals(string.Empty))
+                return 0;
+
+            List<String> listaNumeros = numbers.Split(',').ToList();
+
+            int acumulador = 0;
+
+            foreach (var item in listaNumeros)
+            {
+                acumulador += Int32.Parse(item);
+            }
+
+            return acumulador;
         }
     }
 }
