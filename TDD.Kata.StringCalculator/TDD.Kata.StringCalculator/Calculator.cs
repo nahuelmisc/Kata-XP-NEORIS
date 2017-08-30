@@ -10,7 +10,8 @@ namespace TDD.Kata.StringCalculator
     {
         public int add(string numbers)
         {
-            return 0;
+            string value = numbers.Equals(String.Empty) ? "0" : numbers;
+            return Int32.Parse(value);
         }
     }
 }
