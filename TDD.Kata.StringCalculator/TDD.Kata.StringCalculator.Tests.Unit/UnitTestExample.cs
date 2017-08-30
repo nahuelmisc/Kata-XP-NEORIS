@@ -1,14 +1,16 @@
-﻿using Xunit;
+﻿//using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace TDD.Kata.StringCalculator.Tests.Unit
 {
+
     public class UnitTestExample
     {
-        //private Target Target;
+        private Calculator Target;
 
         public UnitTestExample()
         {
-            //this.Target = new StringCalculator();
+            this.Target = new Calculator();
         }
 
         [Fact]
@@ -16,12 +18,21 @@ namespace TDD.Kata.StringCalculator.Tests.Unit
         {
             //Arrange
             //Your set up!.
+            string numbers = string.Empty;
 
             //Act
             //Your principal action to test.
+            int resultado = this.Target.add(numbers);
 
             //Assert
             //Your expected value.
+            Assert.Equal(0, resultado);
+
         }
+
+
+
+
+
     }
 }
